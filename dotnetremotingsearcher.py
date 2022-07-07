@@ -22,9 +22,9 @@ for root, dirs, files in os.walk(keyword, topdown = True):
               pe.parse_data_directories()
               for entry in pe.DIRECTORY_ENTRY_IMPORT:
                  for imp in entry.imports:
-                     if "RegisterChannel" in imp.name and "mscorlib" in entry.dll:
+                     if "RegisterChannel" in imp.name and "mscorlib.dll" in entry.dll:
                          dotnetremoting.append(x)
-                     elif "System.Runtime.Remoting" in imp.name:
+                     elif "System.Runtime.Remoting.dll" in entry.dll:
                          dotnetremoting.append(x)
           except:
                continue
