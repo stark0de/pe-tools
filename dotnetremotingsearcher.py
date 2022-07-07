@@ -24,6 +24,8 @@ for root, dirs, files in os.walk(keyword, topdown = True):
                  for imp in entry.imports:
                      if "RegisterChannel" in imp.name and "mscorlib" in entry.dll:
                          dotnetremoting.append(x)
+                     elif "System.Runtime.Remoting" in imp.name:
+                         dotnetremoting.append(x)
           except:
                continue
               
