@@ -25,3 +25,6 @@ This tool checks all exe and DLL files in a given directory to see if they have 
 
 ## WCF check
 This tool checks for all the exe files in directory to see if they import various DLLs which are used by the Windows Communication Foundation (WCF) framework.
+
+## .NET remoting checker
+This tool checks the IAT of all the .exe files in a directory to check if it imports a .NET remoting-related function, if this gives positive results, it means a .NET remoting server is registered in those binaries.
