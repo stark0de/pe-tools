@@ -28,3 +28,6 @@ This tool checks for all the exe files in directory to see if they import variou
 
 ## .NET remoting checker
 This tool checks the IAT of all the .exe files in a directory to check if it imports a .NET remoting-related function and certain DLLs, if this gives positive results, it means a .NET remoting server or client is present in those binaries
+
+## Keyword search IAT, EAT:
+This tools just receives as arguments the full path of a folder and the full path of a file containing keywords (1 per line). It will search in all the PE files in the specified directories to check if those keywords are present in any exported or imported functions
